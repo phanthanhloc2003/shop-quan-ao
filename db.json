@@ -1,0 +1,25 @@
+
+{
+  "data": [
+    {
+      "id": 1,
+    "name": "Áo Sơ Mi Dáng Rộng Có Khóa Kéo Thiết Kế Mới Thời Trang Mùa Xuân Thu Theo Phong Cách Hàn Quốc Cho Nữ",
+    "originalPrice": 199000,
+    "promotionPercent": 18,
+    "salePrice":165000,
+    "image":"https://lzd-img-global.slatic.net/g/p/804afae298a8f7c6120952e3f4ae071f.jpg_400x400q80.jpg_.webp",
+    "imageSecondary": [
+      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdv-ljgowl9d9hxa92",
+      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvec-ljgowlocqdli46",
+      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdc-ljgowm5txyxecf",
+      "https://down-vn.img.susercontent.com/file/sg-11134201-7qves-ljgowmktc1le43",
+      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdd-ljgowmyorqqa9b"
+    ]
+    }
+],
+  "pagination": {
+    "limit": 10,
+    "page": 1,
+    "total": 120
+  }
+}
