@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Button({ children, to, onClick, href }) {
+function Button({ children, to, onClick, href, primary }) {
     let Comp = "button";
     const props = {
         onClick,
@@ -14,10 +14,10 @@ function Button({ children, to, onClick, href }) {
         props.href = href;
         Comp = "a"
     }
-
+    const classNames = `w-full ${primary ? 'hover:text-[#ccc] text-[#333] ' : ''}`;
 
     return (
-        <Comp className="w-full  " {...props}>
+        <Comp className={classNames}{...props}>
             <span>{children}</span>
 
         </Comp>

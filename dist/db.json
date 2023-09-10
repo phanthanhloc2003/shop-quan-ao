@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+    "name": "Áo sơ mi nữ công sở dài tay vải đũi màu trắng có túi kiểu hàn tiểu thư đẹp - Áo sơ mi trắng đi học sinh cổ bẻ dáng rộng",
+    "originalPrice": 199000,
+    "promotionPercent": 18,
+    "salePrice":135.000,
+    "image":"https://lzd-img-global.slatic.net/g/p/804afae298a8f7c6120952e3f4ae071f.jpg_400x400q80.jpg_.webp",
+    "imageList": [
+      "https://down-vn.img.susercontent.com/file/007e223d3756039c845d241016dc79b9",
+      "https://down-vn.img.susercontent.com/file/e002710cb5da369e8191605a722a5656",
+      "https://down-vn.img.susercontent.com/file/53aa7f9ca43fe99bfeb6587d3d0539c0",
+      "https://down-vn.img.susercontent.com/file/2a179dc4b4e9e58c5d04b78d7ba61f9e"
+    ],
+    "discount": "43% giảm",
+    "Listedprice":"243.000"
+    }
+],
+  "pagination": {
+    "limit": 10,
+    "page": 1,
+    "total": 120
+  }
+}

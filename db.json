@@ -1,25 +1,979 @@
-
 {
-  "data": [
-    {
-      "id": 1,
-    "name": "Áo Sơ Mi Dáng Rộng Có Khóa Kéo Thiết Kế Mới Thời Trang Mùa Xuân Thu Theo Phong Cách Hàn Quốc Cho Nữ",
-    "originalPrice": 199000,
-    "promotionPercent": 18,
-    "salePrice":165000,
-    "image":"https://lzd-img-global.slatic.net/g/p/804afae298a8f7c6120952e3f4ae071f.jpg_400x400q80.jpg_.webp",
-    "imageSecondary": [
-      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdv-ljgowl9d9hxa92",
-      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvec-ljgowlocqdli46",
-      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdc-ljgowm5txyxecf",
-      "https://down-vn.img.susercontent.com/file/sg-11134201-7qves-ljgowmktc1le43",
-      "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdd-ljgowmyorqqa9b"
-    ]
+ 
+    "product": [
+      {
+        "id": 1,
+        "like": "yêu thích",
+        "address": "hà nội",
+        "name": "Áo sơ mi nữ công sở dài tay vải đũi màu trắng có túi kiểu hàn tiểu thư đẹp - Áo sơ mi trắng đi học sinh cổ bẻ dáng rộng",
+        "originalPrice": 199000,
+        "salePrice": 199000,
+        "image": "https://down-vn.img.susercontent.com/file/sg-11134201-22110-s9pzzybtu2jv06",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/007e223d3756039c845d241016dc79b9",
+          "https://down-vn.img.susercontent.com/file/e002710cb5da369e8191605a722a5656",
+          "https://down-vn.img.susercontent.com/file/53aa7f9ca43fe99bfeb6587d3d0539c0",
+          "https://down-vn.img.susercontent.com/file/2a179dc4b4e9e58c5d04b78d7ba61f9e"
+        ],
+        "promotionPercent": "43% giảm",
+        "Listedprice": 243000,
+        "category" : {
+          "id" : 1,
+          "name" : "thời trang",
+          "search": "áo sơ mi"
+        },
+        "rating": "★★★★★"
+      }, {
+        "id": 2,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Áo Sơ Mi Nữ tay bồng Wexuu Design áo kiểu nữ công sở thời trang chất vải đẹp không nhăn thoáng mát - SM12",
+        "originalPrice": 129000,
+        "salePrice": 129000,
+        "image": "https://down-vn.img.susercontent.com/file/sg-11134201-22110-54vkbwa0kgjve3",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-aygro69algjv4d",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-zsosu59algjv67",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-on1gxza0kgjv38",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-vxtg4ya0kgjv4a"
+        ],
+        "promotionPercent": "27% giảm",
+        "Listedprice": 176000,
+        "category" : {
+          "id" : 1,
+          "name" : "thời trang",
+          "search": "áo sơ mi"
+        },
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 3,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Áo sơ mi nữ dài tay form rộng ulzzang kiểu hàn basic nhiều màu dễ phối đồ WEXUU-SP38",
+        "originalPrice": 159000,
+        "salePrice": 159000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf10o0jnpsuvdf",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf10o0jnoeaf69",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf10o0khiykqde",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf10o0lbhqvrf6",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lf10o0jnr7fb6f"
+        ],
+        "promotionPercent": "47% giảm",
+        "Listedprice": 300000,
+        "category" : {
+          "id" : 1,
+          "name" : "thời trang",
+          "search": "áo sơ mi"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      , {
+        "id": 4,
+        "like": false,
+        "address": "Thành Phố Hồ Chí Minh",
+        "name": "Bộ Quần Áo Thể Thao Nam ROUGH CoolFit Chất Thun CVC Co Giãn 4 Chiều",
+        "originalPrice": 199000,
+        "salePrice": 199000,
+        "image": "https://down-vn.img.susercontent.com/file/1ac12505fc7f0840e0cdf3c50f302de3",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/7c63c8dafec347b1b77800c76ae0373c",
+          "https://down-vn.img.susercontent.com/file/e002710cb5da369e8191605a722a5656",
+          "https://down-vn.img.susercontent.com/file/ae5ebfd88637fdf59c547a27e75ab0be",
+          "https://down-vn.img.susercontent.com/file/06977cbef472212dac8cf42df5ebeda5"
+        ],
+        "promotionPercent": "23% giảm",
+        "Listedprice": 258000,
+        "category" : {
+          "id" : 1,
+          "name" : "thời trang",
+          "search": "áo sơ mi"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 5,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Bộ quần áo thể thao nam nữ vải poly cá sấu thoáng mát thấm hút mồ hôi cao cấp họa tiết chữ rd Bảo Đăng",
+        "originalPrice": 129000,
+        "salePrice": 129000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lflhz5a471px5f",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lflhz5a48gadd2",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfli7tkeunhx09",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfli7tkew22s52",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfli7tkexgn832"
+        ],
+        "promotionPercent": "44% giảm",
+        "Listedprice": 230000,
+        "category" : {
+          "id" : 1,
+          "name" : "thời trang",
+          "search": "áo sơ mi"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      , {
+        "id": 6,
+        "like": false,
+        "address": "Hà Nội",
+        "name": "Điện thoại Apple iPhone 14 Pro Max 128GB",
+        "originalPrice": 27250000,
+        "salePrice": 27250000,
+        "image": "https://down-vn.img.susercontent.com/file/198720e37eeccfcdc98c6ea87f5decaa",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/7bb6d3ae9b86f3d7a7b1ca0e48ec311a",
+          "https://down-vn.img.susercontent.com/file/bdda15455bac30f5bc2b404752bbe3ba",
+          "https://down-vn.img.susercontent.com/file/3aaade086d08751f776049fdc99f4c6e",
+          "https://down-vn.img.susercontent.com/file/c1b2e42986f73de8bedb2282e2687626"
+        ],
+        "promotionPercent": "20% giảm",
+        "Listedprice": 33990000,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 7,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Điện thoại Xiaomi Redmi 12C 3+32GB/4+64GB, Media Tek Helio G85|Camera keps AI 50MP, Pin 5000mAh, Bảo hành 18 tháng",
+        "originalPrice": 2149000,
+        "salePrice": 2149000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134201-23030-t5gpy24i3dov02",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-t5gpy24i3dov02",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-h8e9ld5i3dove8",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-hbqfm94i3dov5c",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-bpun334i3dov2d"
+        ],
+        "promotionPercent": "33% giảm",
+        "Listedprice": 3199000,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 8,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Điện thoại 𝟏𝟐𝐏𝐑𝐎𝐌𝐀𝐗 HOÀNG KIÊN Mobile 128/256G zin all",
+        "originalPrice": 17940000,
+        "salePrice": 17940000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lixvev306jf679",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/007e223d3756039c845d241016dc79b9",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lixvev3054uq20",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lio8r057nefme9",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lixvev303qaa6f"
+        ],
+        "promotionPercent": "43% giảm",
+        "Listedprice": 23000000,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 9,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Điện Thoại Xiaomi K40 Gaming ram8 bộ nhớ 128 hàng new nguyên hộp",
+        "originalPrice": 7800000,
+        "salePrice": 7800000,
+        "image": "https://down-vn.img.susercontent.com/file/46c7d41a1586d2f92a519780a29b5bff",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/10351a386dd7441d800f71254dee871c",
+          "https://down-vn.img.susercontent.com/file/e002710cb5da369e8191605a722a5656",
+          "https://down-vn.img.susercontent.com/file/09db7c670f999690587d50f5325c01cf",
+          "https://down-vn.img.susercontent.com/file/ce753e5b6dea469d28109c8e1fa25e89"
+        ],
+        "promotionPercent": "",
+        "Listedprice": "",
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      , {
+        "id": 10,
+        "like": "yêu thích",
+        "address": "Hà Nôị",
+        "name": "Điện thoại Xiaomi 13 Ultra - Hàng nhập khẩu",
+        "originalPrice": 2167000,
+        "salePrice": 2167000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg21mwohg2rb53",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg21mwoheo6vbd",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg21mwoheo6vbd",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg21mwohhhbrd8",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lg21mwohivw7ec"
+        ],
+        "promotionPercent": "16% giảm",
+        "Listedprice": 2488000,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      , {
+        "id": 11,
+        "like": "yêu thích",
+        "address": "Thành Phố Hồ Chí Minh",
+        "name": "Điện thoại gaming ASUS ROG Phone 7 (16GB/512GB) - Chính hãng",
+        "originalPrice": 2410000,
+        "salePrice": 2410000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk66y22tkvlua7",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk66y22tma6aa4",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk66y22tnoqq19",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk66y22tp3b6b7",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lk66y22ti2gyc4"
+        ],
+        "promotionPercent": "0 giảm",
+        "Listedprice": 0,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 12,
+        "like": false,
+        "address": "Đà nẵng",
+        "name": "BUBOT P80 Android 13 ((6.583 Inch FHD + Màn Hình 16GB RAM 256GB ROM NFC 48MP + 24MP 5200mAh)) Điện Thoại Phổ Thông"
+        ,
+        "originalPrice": 3455000,
+        "salePrice": 3455000,
+        "image": "https://down-vn.img.susercontent.com/file/cn-11134207-7qukw-lh46dbjqhmcc66",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/cn-11134207-7qukw-lh46dbjqj0ws37",
+          "https://down-vn.img.susercontent.com/file/e002710cb5da369e8191605a722a5656",
+          "https://down-vn.img.susercontent.com/file/53aa7f9ca43fe99bfeb6587d3d0539c0",
+          "https://down-vn.img.susercontent.com/file/2a179dc4b4e9e58c5d04b78d7ba61f9e"
+        ],
+        "promotionPercent": "42% giảm",
+        "Listedprice": 5940000,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "dien thoai"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 13,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Máy tính xách tay Apple MacBook Air (2020) M1 Chip, 13.3-inch, 8GB, 256GB SSD",
+        "originalPrice": 18990000,
+        "salePrice": 18990000,
+        "image": "https://down-vn.img.susercontent.com/file/dd3010efc9b6f9ad0be6f3ab1dcfb7c8",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/007e223d3756039c845d241016dc79b9",
+          "https://down-vn.img.susercontent.com/file/8bede43e38bd49328c7ecd2ff40c8ea5",
+          "https://down-vn.img.susercontent.com/file/10b97021ed63dc92c1aa647efbd0fade",
+          "https://down-vn.img.susercontent.com/file/2a179dc4b4e9e58c5d04b78d7ba61f9e"
+        ],
+        "promotionPercent": "34% giảm",
+        "Listedprice": 28999000,
+        "category" : {
+          "id" : 3,
+          "name" : "macbook",
+          "search": "macbook"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 14,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Apple MacBook Air 13\" 2020 (M1/8GB/256GB)",
+        "originalPrice": 19400000,
+        "salePrice": 19400000,
+        "image": "https://down-vn.img.susercontent.com/file/sg-11134201-22100-7jka5nkyr2iv3c",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/2477942b1ded3ec5ad3108a6e3140f63",
+          "https://down-vn.img.susercontent.com/file/9e9f0f01b5f4fcfe13252fd14edffa6b",
+          "https://down-vn.img.susercontent.com/file/1064afc02e7ecd3d33912a849338061f",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-23020-rm8vwbd23cnv86"
+        ],
+        "promotionPercent": "33% giảm",
+        "Listedprice": 28990000,
+        "category" : {
+          "id" : 3,
+          "name" : "macbook",
+          "search": "macbook"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      , {
+        "id": 15,
+        "like": false,
+        "address": "Đà nẵng",
+        "name": "Apple Macbook Air (2022) M2 chip, 13.6 inches, 8GB, 256GB SSD",
+        "originalPrice": 28650000,
+        "salePrice": 28650000,
+        "image": "https://down-vn.img.susercontent.com/file/2c52cf373ab1cd63c5a4687917c222c3",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/9126c894a9653a29083ffa77ea202297",
+          "https://down-vn.img.susercontent.com/file/d64a50aa7991eef95a46501873c24910",
+          "https://down-vn.img.susercontent.com/file/87d6224ecac84eb89b6a19338d896795",
+          "https://down-vn.img.susercontent.com/file/f6fb3118ad5fe7c354b2ccb84d07c429"
+        ],
+        "promotionPercent": "19% giảm",
+        "Listedprice": 35590000,
+        "category" : {
+          "id" : 3,
+          "name" : "macbook",
+          "search": "macbook"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      , {
+        "id": 16,
+        "like": false,
+        "address": "đà nẵng",
+        "name": "Máy tính xách tay Apple MacBook Air 15 inch (2023) M2 Chip 8GB, 512GB",
+        "originalPrice": 36190000,
+        "salePrice": 36190000,
+        "image": "https://down-vn.img.susercontent.com/file/4085e1ad54085dc1639aa6cbe94e6cf5",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/64b55a87c3d0911ac0b1b5230e905038",
+          "https://down-vn.img.susercontent.com/file/977bc4a3c6fd254691b82638e0c9ad71",
+          "https://down-vn.img.susercontent.com/file/61701099e2fe6b92c57783ae08eb28a4",
+          "https://down-vn.img.susercontent.com/file/f43ff45df09ca9b9c3056c2ff5704e5b"
+        ],
+        "promotionPercent": "5% giảm",
+        "Listedprice": 37990000,
+        "category" : {
+          "id" : 3,
+          "name" : "macbook",
+          "search": "macbook"
+        }
+        ,
+        "rating": "★★★★★"
+      },
+      {
+        "id": 17,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Máy tính xách tay Apple Macbook Air (2022) M2 chip, 13.6 inches, 8GB, 256GB SSD",
+        "originalPrice": 27190000,
+        "salePrice": 27190000,
+        "image": "https://down-vn.img.susercontent.com/file/b9245889043f87930168547032a5843e",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/b09430e3c8c8dba7b6dc87d25cd8cb0e",
+          "https://down-vn.img.susercontent.com/file/d3ebf604bcc0fcc5420cd0e680ef501a",
+          "https://down-vn.img.susercontent.com/file/26b018e5decbecf17fb8f72117f8ea10",
+          "https://down-vn.img.susercontent.com/file/cb20ed57412e64f0cdc5a0acd9fa97eb"
+        ],
+        "promotionPercent": "18% giảm",
+        "Listedprice": 32990000,
+        "category" : {
+          "id" : 3,
+          "name" : "macbook",
+          "search": "macbook"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,
+      {
+        "id": 18,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Chuột không dây GOOJODOQ bluetooth 2.4Ghz 2 trong 1 chất lượng cao thích hợp cho ipad",
+        "originalPrice": 120000,
+        "salePrice": 120000,
+        "image": "https://down-vn.img.susercontent.com/file/a24fcdd0ba2f86776f238a6a510dea14",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/37ab8797ac05b535a194ac41e38bf61a",
+          "https://down-vn.img.susercontent.com/file/2825916fb5c7aeb15b7fab05f2c51a71",
+          "https://down-vn.img.susercontent.com/file/a6c51b22102131da350d84782105d430",
+          "https://down-vn.img.susercontent.com/file/28e697f2f0b27b22e136e7ea2993549b"
+        ],
+        "promotionPercent": "40% giảm",
+        "Listedprice": 200000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      },
+      {
+        "id": 19,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Chuột không dây Logitech M220 Silent - giảm ồn, USB, pin 1.5 năm, phù hợp PC/Laptop",
+        "originalPrice": 240000,
+        "salePrice": 240000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lkqdi97ty11cdf",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22100-31a4jjlnlliv7f",
+          "https://down-vn.img.susercontent.com/file/8c0b122921287522df3990766de1da08",
+          "https://down-vn.img.susercontent.com/file/16bf2400ae08ec9e002b908dc395eceb",
+          "https://down-vn.img.susercontent.com/file/8d7ad140e6a9a4e1a601a9ffb68617c5"
+        ],
+        "promotionPercent": "31% giảm",
+        "Listedprice": 350000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      },
+      {
+        "id": 20,
+        "like": false,
+        "address": "Đà nẵng",
+        "name": "UPUPIN Chuột không dây gaming Led wireless 2.4GHz laptop Tự động đổi màu sắc chuột chơi game không dây",
+        "originalPrice": 117000,
+        "salePrice": 117000,
+        "image": "https://down-vn.img.susercontent.com/file/49d1bec944cf5e0b373949178e13405d",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/2461b765c0cc4fab035427c07d210efa",
+          "https://down-vn.img.susercontent.com/file/528411b012ff1bc564319e1a777beec8",
+          "https://down-vn.img.susercontent.com/file/451cf65014530e973b140c022ce5494a",
+          "https://down-vn.img.susercontent.com/file/2e25267decf99d9f65df245b7060bbb3"
+        ],
+        "promotionPercent": "44% giảm",
+        "Listedprice": 200197,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      ,
+      {
+        "id": 21,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Chuột Không Dây Mado Máy Tính Kết Nối Bluetooth Siêu Nhạy Không Gây Ồn",
+        "originalPrice": 75000,
+        "salePrice": 75000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134201-23030-lzvh2yqf7qovde",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-pidz7saw8qov35",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-49vqrauzlfovb5",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23020-vrzyrxex9mnvc2",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-23030-v2qxauaw8qovc6"
+        ],
+        "promotionPercent": "35k giảm",
+        "Listedprice": 200291,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,
+      {
+        "id": 22,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Chuột gaming không dây bluetooth sạc pin Sidotech Inphic P6W cho game thủ chơi game chuyên nghiệp kết nối Wireless 2.4G",
+        "originalPrice": 136000,
+        "salePrice": 136000,
+        "image": "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-liiju9kym4sy47",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-liiju9kyoxxua4",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-liiju9kyf3yqee",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-liiju9kyjbo2e2",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-liiju9kygij6af"
+        ],
+        "promotionPercent": "35kgiảm",
+        "Listedprice": 249000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,
+      {
+        "id": 23,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Chuột không dây HXSJ M100 wireless 2.4Ghz sạc pin, chống ồn siêu nhạy dùng cho máy tính, laptop, tivi - Hàng Chính Hãng",
+        "originalPrice": 136000,
+        "salePrice": 136000,
+        "image": "https://down-vn.img.susercontent.com/file/dc6f1bec27bd3beae92ec5f367328f27",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/9033b5cf0fd82f4e166986a01b3e576f",
+          "https://down-vn.img.susercontent.com/file/45139cab1441d39c74429f72d7d39fe1",
+          "https://down-vn.img.susercontent.com/file/d5fa1b62e22232617d36995a45b094ce",
+          "https://down-vn.img.susercontent.com/file/9857ce7cc4f3039c8ef46112e6cbd7ea"
+        ],
+        "promotionPercent": "48%giảm",
+        "Listedprice": 249000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,
+      {
+        "id": 24,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Chuột máy tính không dây Dareu LM115G (Trắng) - Bảo hành 24 tháng",
+        "originalPrice": 136000,
+        "salePrice": 136000,
+        "image": "https://down-vn.img.susercontent.com/file/82ad24fa21386e030e98b10a157d3bad",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/4ea9e3db1ca2d0b47b05ac1d1bee6c91",
+          "https://down-vn.img.susercontent.com/file/45139cab1441d39c74429f72d7d39fe1",
+          "hhttps://down-vn.img.susercontent.com/file/6567d8fec5e1e7f13c9581235ccb8815",
+          "https://down-vn.img.susercontent.com/file/6567d8fec5e1e7f13c9581235ccb8815"
+        ],
+        "promotionPercent": "12%giảm",
+        "Listedprice": 169000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,
+      {
+        "id": 25,
+        "like": false,
+        "address": "Đà nẵng",
+        "name": "Chuột không dây Fuhlen D90s cổng sạc usb type C + tặng kèm bàn di",
+        "originalPrice": 585000,
+        "salePrice": 585000,
+        "image":" https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgvzyqwwlf769d",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgvzyqwwmtrmbc",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgvzyqwwim2a7b",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgvzyqwwo8c29b",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgvzyqwwpmwi93"
+        ],
+        "promotionPercent": "10%giảm",
+        "Listedprice": 650000,
+        "category" : {
+          "id" : 4,
+          "name" : "chuột",
+          "search": "chuot"
+        }
+        ,
+        "rating": "★★★★"
+      },{
+        "id": 26,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Bàn phím không dây Bluetooth | Used, Original A. A1314",
+        "originalPrice": 850000,
+        "salePrice": 850000,
+        "image":" https://down-vn.img.susercontent.com/file/1978550833b0addca5d1cfd096c6cd24",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/47d97053191ab33aeae9da682f7efdbc",
+          "https://down-vn.img.susercontent.com/file/86a5b2ea503f33d0c0d9ee9e1144dc00",
+          "https://down-vn.img.susercontent.com/file/97338da8e45ab4af6c72477c2d8b6f28",
+          "https://down-vn.img.susercontent.com/file/1a5787b2b1d43afaf0ea6fded71d9c5e"
+        ],
+        "promotionPercent": "11%giảm",
+        "Listedprice": 950000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 27,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Bàn phím không dây đa kết nối Bluetooth và Wireless 2.4G có ",
+        "originalPrice": 350000,
+        "salePrice": 350000,
+        "image":" https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lesgruldkpxz57",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lesgrxon1w9612",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lesgs4lsxa3ba5",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lesxgqhjx28a6f",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lesxgvuy21zeca"
+        ],
+        "promotionPercent": "13%giảm",
+        "Listedprice": 400000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      },{
+        "id": 28,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Bàn Phím Cơ Bluetooth Không Dây K68BT Trục Cơ Red Switch...  ",
+        "originalPrice": 489000,
+        "salePrice": 489000,
+        "image":" https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-ljp0y8h30bsk12",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-gl2d4d6jpfjvba",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-93xkd05jpfjv8a",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-587bbg6jpfjv0a",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-22110-5zgut45jpfjv13"
+        ],
+        "promotionPercent": "39%giảm",
+        "Listedprice": 800000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 29,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "Bàn phím ko dây bluetooth giả cơ AJAZZ 308i 2023 dành cho .. ",
+        "originalPrice": 575000,
+        "salePrice": 575000,
+        "image":" https://down-vn.img.susercontent.com/file/28a23086696331ecf93c516ffcf49af3",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/d05444cdc512758e7250608a16506ce2",
+          "https://down-vn.img.susercontent.com/file/c79e8ef15ba0ab96642577461b33cd5c",
+          "https://down-vn.img.susercontent.com/file/9799dc09679deaa2652c7ef0550a6b8c",
+          "https://down-vn.img.susercontent.com/file/0f902eccfc661a7285bfede4662d297e"
+        ],
+        "promotionPercent": "12%giảm",
+        "Listedprice": 649000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 30,
+        "like": "yêu thích",
+        "address": "Hà Nội",
+        "name": "APPLE TRACKPAD 2 + APPLE MAGIC KEYBOAR 2 (LIKE NEW)",
+        "originalPrice": 4580000,
+        "salePrice": 4580000,
+        "image":" https://down-vn.img.susercontent.com/file/fb77a3f54c8be5b829c2a5313655c568",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/c8f1a15e82a9bec9391478d528d08cb4",
+          "https://down-vn.img.susercontent.com/file/c17f6297797254c146cda1c58d89311e",
+          "https://down-vn.img.susercontent.com/file/c84dbcda9bd2819f5ad529adf80891cb"
+        ],
+        "promotionPercent":false,
+        "Listedprice": false,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      ,{
+        "id": 31,
+        "like": "yêu thích",
+        "address": "Thành Phố Hồ Chí Minh",
+        "name": "COMBO bàn phím, chuột Ko Dây APPLE LỚN ( TRẮNG HOẶC ĐEN)",
+        "originalPrice": 350000,
+        "salePrice": 350000,
+        "image":" https://down-vn.img.susercontent.com/file/763fed2b3faadd3382a366bee0f1a10f",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/da6ae0a6364a75ad676f71dea4596cdc",
+          "https://down-vn.img.susercontent.com/file/d77165d0ad486a9eb9788e3eaddf9d42",
+          "https://down-vn.img.susercontent.com/file/81a5986676ad7b748f025eee9e8761d0"
+        ],
+        "promotionPercent":false,
+        "Listedprice": false,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 32,
+        "like": "yêu thích",
+        "address": "Thành Phố Hồ Chí Minh",
+        "name": "Bàn phím Bluetooth ZTU SMART X5 nhỏ gọn tiện lợi kết nối ổn định",
+        "originalPrice": 179000,
+        "salePrice": 179000,
+        "image":" https://down-vn.img.susercontent.com/file/f099d6c0d6e0828bd0d72dab18d4595c",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/03f3fba82b86834ef3f4fa05bc4f7e38",
+          "https://down-vn.img.susercontent.com/file/be3c1c24ecab94d63e3886174b4d8197",
+          "https://down-vn.img.susercontent.com/file/5b489aa47e598a235189b81b93576dd8"
+        ],
+        "promotionPercent":"40% giảm",
+        "Listedprice": 299000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 33,
+        "like": false,
+        "address": "Thành Phố Hồ Chí Minh",
+        "name": "Bàn phím Bluetooth không dây mini cho Ipad Apple Iphone điện thoại",
+        "originalPrice": 139000,
+        "salePrice": 139000,
+        "image":" https://down-vn.img.susercontent.com/file/4d4ce8fa7f74d7d7988cac5adde3ca67",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/ee73fb37089513d9767d7c6d740fac80",
+          "https://down-vn.img.susercontent.com/file/c3082dc35c564f6ef125179224cdd8ce",
+          "https://down-vn.img.susercontent.com/file/0ba0d11f9c9d062f555586da0a4af1f6"
+        ],
+        "promotionPercent":"36% giảm",
+        "Listedprice": 189000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 34,
+        "like": "yêu thích",
+        "address": "Hà Nôị",
+        "name": "Bàn Phím Bluetooth Không Dây Cho Apple Huawei Lenovo Laptop Tablet",
+        "originalPrice": 565864,
+        "salePrice": 565864,
+        "image":" https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vyej41bm446",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vyfakx51u53",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vyfzjwky414",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vygpmuex87d",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vyhg9rfnwbc",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6vyi58qw3wea"
+        ],
+        "promotionPercent":false,
+        "Listedprice": false,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }  ,{
+        "id": 34,
+        "like": "yêu thích",
+        "address": "Hà Nôị",
+        "name": "RK960 Hotswap - Bàn phím cơ RK960 kết nối 3 chế độ ",
+        "originalPrice": 1599000,
+        "salePrice": 1599000,
+        "image":" https://down-vn.img.susercontent.com/file/1cc9c37905ae1ba8d904829cd4fb1d82",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/7737b6b21f87dc79bc23b654f3b9a6ea",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfumwigce5wq0b",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfumwigc9y7e34",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfumwigcbcrua6",
+          "https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lfumwigccrca58"
+        ],
+        "promotionPercent":"13%giảm",
+        "Listedprice": 2090000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★"
+      }
+      ,{
+        "id": 35,
+        "like": "yêu thích",
+        "address": "Hà Nôị",
+        "name": "Bàn phím cơ Gaming DAREU EK87 Multi LED - Chính hãng ",
+        "originalPrice": 47000,
+        "salePrice": 47000,
+        "image":"https://down-vn.img.susercontent.com/file/sg-11134201-22120-ken3noxn9blvf7",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/e73e030605d15155282f2057a0ff6520",
+          "https://down-vn.img.susercontent.com/file/ecb8a8a3877519d08b630b39b04c373c",
+          "https://down-vn.img.susercontent.com/file/aa8cc3d74918fd5cf6a8463999918cac",
+          "https://down-vn.img.susercontent.com/file/9e04d7e14cdd05d53352c0ea099ea4a6",
+          "https://down-vn.img.susercontent.com/file/898893a1ec2eb501ad2d0457beda7d59"
+        ],
+        "promotionPercent":"34%giảm",
+        "Listedprice": 750000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 36,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Ốp Lưng Kèm Bàn Phím Bluetooth Không Dây Cho Apple iPad ",
+        "originalPrice": 396000,
+        "salePrice": 396000,
+        "image":"https://down-vn.img.susercontent.com/file/edf447977781d8c1b0461e4fc8d2755d",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/70d2468d13017d0d34fbc57096dc7160",
+          "https://down-vn.img.susercontent.com/file/788f16804576a72077353b37db847131",
+          "https://down-vn.img.susercontent.com/file/114203cc8da384b29568e8131cf0c904",
+          "https://down-vn.img.susercontent.com/file/68f85290422073e98baf2cf173425a0c",
+          "https://down-vn.img.susercontent.com/file/fb89e58258c3b90e84f01df38a328521"
+        ],
+        "promotionPercent":"30%giảm",
+        "Listedprice": 528000,
+        "category" : {
+          "id" : 6,
+          "name" : "áp lưng",
+          "search": "ap lưng"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 37,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Phù Hợp Bàn Phím Bluetooth Không Dây Hình Shin-Chan Ch ",
+        "originalPrice": 250000,
+        "salePrice": 250000,
+        "image":"https://down-vn.img.susercontent.com/file/sg-11134201-7qvfw-liwyr05ua3qra9",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/sg-11134201-7qvfj-liwyr028fd9z7d",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-7qveh-liwyr0ak4lc6a1",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-7qvf6-liwyr08c6g6r94",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-7qvdv-liwyr0jppsuhce",
+          "https://down-vn.img.susercontent.com/file/sg-11134201-7qvd4-liwyr07i7nd909"
+        ],
+        "promotionPercent":"50%giảm",
+        "Listedprice": 500000,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 38,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Apple Magic Keyboard for iPad Pro 12.9‑inch (5th Gen)- Hàng Chính Hãng ",
+        "originalPrice": 10290000,
+        "salePrice": 10290000,
+        "image":"https://down-vn.img.susercontent.com/file/868d834adb3f04c3c9096917cfa0d0b8",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/7f660b68d4dd41efdd32f92a46c8d2d8",
+          "https://down-vn.img.susercontent.com/file/5c97de0e5db502892c18c0769ec8fd57",
+          "https://down-vn.img.susercontent.com/file/23a011ca4f14cbd29543d34ed213fed2",
+          "https://down-vn.img.susercontent.com/file/76c471d1e44a0fcfc60b86f0238c0a47"
+         
+        ],
+        "promotionPercent": false,
+        "Listedprice": false,
+        "category" : {
+          "id" : 2,
+          "name" : "điện thoại",
+          "search": "điện thoại"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+      ,{
+        "id": 39,
+        "like": "yêu thích",
+        "address": "Đà nẵng",
+        "name": "Bàn Phím bluetooth Không Dây Kèm Chuột Phù Hợp Cho Apple Huawei ipad ",
+        "originalPrice": 432768,
+        "salePrice": 432768,
+        "image":"https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wd8m0h3gy8e",
+        "imageList": [
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wd9evav9u94",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wdacpxbyqfd",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wdb7io8wc2f",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wdc3pd5ak61",
+          "https://down-vn.img.susercontent.com/file/vn-11134201-7qukw-lj6wdd4lv570f8"
+        ],
+        "promotionPercent": false,
+        "Listedprice": false,
+        "category" : {
+          "id" : 5,
+          "name" : "bàn phím",
+          "search": "ban phim"
+        }
+        ,
+        "rating": "★★★★★"
+      }
+
+
+    
+    ],
+    "pagination": {
+      "limit": 4,
+      "page": 1,
+      "total": 20
     }
-],
-  "pagination": {
-    "limit": 10,
-    "page": 1,
-    "total": 120
-  }
+  
+ 
 }

@@ -17,7 +17,7 @@ function Register() {
       const action = register(values);
       const resultAction = await dispatch(action);
       const user = unwrapResult(resultAction);
-      console.log("new user", user);
+     
       enqueueSnackbar('tạo tài khoản thành công🎉🎉', {variant: "success" , autoHideDuration: 3000} );
 
     Navigate("/login")

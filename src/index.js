@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import store from "./Auth/compoment/userSlice"
+
 import { SnackbarProvider } from 'notistack'; // Import from 'notistack'
+import store from "./app/store";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

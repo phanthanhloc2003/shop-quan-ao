@@ -1,158 +1,212 @@
-import { Link } from "react-router-dom";
-import { Avatar } from "@mui/material";
 import {
-  faSearch,
-  faRightToBracket,
-  faEarthAsia,
-  faGear,
-  faChevronRight,
+  faBell,
+  faCircleQuestion,
+  faEarthAmericas,
+  faChevronDown,
+  faCartShopping,
+  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Tippy from "@tippyjs/react/headless";
-
-import { Menu, Wrapper as PoperWrapper } from "../poper";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../Auth/compoment/userSlice";
+import { Link } from "react-router-dom";
+import Tippy from "@tippyjs/react/headless"; // Import thư viện Tippy
+import Wrapper from "../poper/Wrapper";
+import { useEffect, useState } from "react";
+import Search from "./compoment/search";
+import { Avatar } from "@mui/material";
 import { WrapperName } from "../poper";
-import Button from "../Button";
-import "tippy.js/dist/tippy.css"; // Import CSS của Tippy
-import "tippy.js/animations/shift-away.css";
-
-const Menu_Item = [
-  {
-    icon: <FontAwesomeIcon icon={faEarthAsia} />,
-    title: "English",
-    to: "/english", // Địa chỉ URL tương ứng với tiếng Anh
-  },
-  {
-    icon: <FontAwesomeIcon icon={faGear} />,
-    title: "Settings",
-    to: "/settings", // Địa chỉ URL tương ứng với cài đặt
-  },
-  {
-    icon: <FontAwesomeIcon icon={faRightToBracket} />,
-    title: "Đăng nhập",
-    to: "/login", // Địa chỉ URL tương ứng với đăng nhập
-  },
-];
-const Menulist = [
-  {
-    title: "men",
-    icon: <FontAwesomeIcon icon={faChevronRight} />,
-  },
-  {
-    title: "women",
-    icon: <FontAwesomeIcon icon={faChevronRight} />,
-  },
-  {
-    title: "kis",
-    icon: <FontAwesomeIcon icon={faChevronRight} />,
-  },
-];
+import productListApi from "../../api/productListApi";
+import { cartItemsCountSelector } from "../../layout/Cart/slectors";
+import { useNavigate } from "react-router-dom";
+import { addSearchID } from "./compoment/searchSlice";
 
 function Header() {
+  const dispatch = useDispatch();
+  const cartItemsCount = useSelector(cartItemsCountSelector);
+
+  const handleLogout = () => {
+    const action = logout();
+    dispatch(action);
+  };
+  const [values, setValues] = useState("");
+  const [name, setName] = useState([]);
+  const Navigate = useNavigate();
+
+  const [tooltipVisible, setTooltipVisible] = useState(false);
+  const logedInUser = useSelector((state) => state.user.current);
+  const isLoggedIn = !!logedInUser.id;
+
+  const handleSearch = (id) => {
+    dispatch(addSearchID({ id: id }));
+  
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await productListApi.getAll();
+
+        setName(data);
+      } catch (error) {
+        console.log("Failed to get data", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handlelogoutClick = () => {
+    Navigate("/cart");
+  };
   return (
-    <div>
-      <div className="flex w-full h-[70px] items-center bg-[#987F69] px-[30px] justify-between">
-        <div className="flex items-center">
-          <img
-            className="w-[40px] h-[40px] object-cover rounded-[50%]"
-            src="https://netlink.edu.vn/tao-logo-shop-quan-ao/imager_5041.jpg"
-            alt="logo"
-          />
-          <div>
-            <ul className="flex">
-              <Link to="/">
-                <li className="ml-[15px] hover:text-[#ccc] text-[white]">
-                  TRANG CHỦ
-                </li>
-              </Link>
-              <li className="ml-[10px] hover:text-[#ccc] text-[white]">
-                SẢN PHẨM
-              </li>
+    <div className="bg-[#F94C30]  ">
+      <div className="w-auto max-w-[1200px] ml-auto mr-auto ">
+        <div className="flex justify-between">
+          <div className="flex">
+            <div className="flex items-center">
+              <p className="text-[#FFF6F5] text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer">
+                Kênh Người Bán
+              </p>
+              <span className="mx-[10px] text-[#FB7260] ">|</span>
+              <p className="text-[#FFF6F5]  text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer">
+                Trở Thành Người Bán
+              </p>
+              <span className="mx-[10px] text-[#FB7260] ">|</span>
               <Tippy
                 interactive
-                delay={[0, 200]}
-                placement="bottom-start"
+                placement="bottom"
+                offset={[-45, 10]}
                 render={(attrs) => (
                   <div className="" tabIndex="-1" {...attrs}>
-                    <WrapperName>
-                      <Button lists={Menulist} />
-                    </WrapperName>
+                   
                   </div>
                 )}
               >
-                <li className="ml-[10px] hover:text-[#ccc] text-[white]">
-                  NEW ARRIVAL
-                </li>
+                <p className="text-[#FFF6F5]  text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer">
+                  Tải Ứng dụng
+                </p>
               </Tippy>
+
+              <span className="mx-[10px] text-[#FB7260]">|</span>
+              <div className="text-[#FFF6F5]  text-[15px] font-light  flex ">
+                {" "}
+                Kết Nối
+                <div className="mx-[5px]">
+                  <FontAwesomeIcon icon={faFacebook} />
+                </div>
+                <div>
+                  <FontAwesomeIcon icon={faInstagram} />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <p className="text-[#FFF6F5] text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer">
+              <span className="mr-[5px]">
+                <FontAwesomeIcon icon={faBell} />
+              </span>
+              Thông Báo
+            </p>
+            <p className="text-[#FFF6F5] text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer px-[6px]">
+              <span className="mr-[5px]">
+                <FontAwesomeIcon icon={faCircleQuestion} />
+              </span>
+              Hỗ Trợ
+            </p>
+
+            <Tippy
+              interactive
+              placement="bottom"
+              offset={[-45, 10]}
+              render={(attrs) => (
+                <div className="" tabIndex="-1" {...attrs}>
+                  <Wrapper>
+                    <div className="ml-[20px] items-center ">
+                      <p className="pt-[10px] hover:cursor-pointer hover:text-[#ee4d2d] ">
+                        Tiếng Việt
+                      </p>
+                      <p className="mt-[10px] hover:cursor-pointer hover:text-[#ee4d2d]">
+                        English
+                      </p>
+                    </div>
+                  </Wrapper>
+                </div>
+              )}
+            >
+              <p
+                className="text-[#FFF6F5] text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer mx-[8px]"
+                onClick={() => setTooltipVisible(!tooltipVisible)}
+              >
+                <span className="mr-[5px]">
+                  <FontAwesomeIcon icon={faEarthAmericas} />
+                </span>
+                Tiếng Việt
+                <span className="ml-[5px]">
+                  <FontAwesomeIcon icon={faChevronDown} />
+                </span>
+              </p>
+            </Tippy>
+
+            {!isLoggedIn ? (
+              <div className="flex">
+                <Link to="/login/register">
+                  <p className="text-[#FFF6F5] text-[15px] font-medium hover:text-opacity-70 hover:cursor-pointer">
+                    Đăng Ký
+                  </p>
+                </Link>
+
+                <span className="mx-[10px]  text-[#FB7260]">|</span>
+                <Link to="/login">
+                  <p className="text-[#FFF6F5] text-[15px] font-medium hover:text-opacity-70  hover:cursor-pointer">
+                    Đăng Nhập{" "}
+                  </p>
+                </Link>
+              </div>
+            ) : (
               <Tippy
                 interactive
-                placement="bottom-start"
+                placement="bottom"
                 render={(attrs) => (
                   <div className="" tabIndex="-1" {...attrs}>
                     <WrapperName>
-                      <Button lists={Menulist} />
+                      <button onClick={handleLogout}>Đăng Xuất</button>
                     </WrapperName>
                   </div>
                 )}
               >
-                <li className="ml-[10px] hover:text-[#ccc] text-[white]">
-                  OUTLET TỪ 88K
-                </li>
-              </Tippy>{" "}
-              <Tippy
-                interactive
-                placement="bottom-start"
-                render={(attrs) => (
-                  <div className="" tabIndex="-1" {...attrs}>
-                    <WrapperName>
-                      <Button lists={Menulist} />
-                    </WrapperName>
-                  </div>
-                )}
-              >
-                <li className="ml-[10px] hover:text-[#ccc] text-[white]">
-                  ĐỒNG GIÁ 199K
-                </li>
+                <div className="ml-[5px] hover:cursor-pointer">
+                  <Avatar
+                    sx={{ width: 30, height: 30 }}
+                    alt="Remy Sharp"
+                    src="https://scontent.fdad5-1.fna.fbcdn.net/v/t39.30808-6/307870087_1750420278690978_2333351853473382845_n.jpg?stp=dst-jpg_s417x417&_nc_cat=106&ccb=1-7&_nc_sid=da31f3&_nc_ohc=jklSN18DCm8AX9wSzz8&_nc_ht=scontent.fdad5-1.fna&oh=00_AfB9Ce6uBpY7FXOSHPvGrPBhY3Ts72LxW9mcJSyQ3PBscw&oe=64F10209"
+                  />
+                </div>
               </Tippy>
-              <li className="ml-[10px] hover:text-[#ccc] text-[white]">
-                GIỚI THIỆU
-              </li>
-            </ul>
+            )}
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="flex relative">
-            <input
-              className="bg-[#ccc] ml-auto  outline-none rounded-[50px] p-[5px] text-[#987F69] focus:border-red-500 focus:border-[1px]"
-              type="text"
-              placeholder="Tìm kiếm..."
-            />
-            <FontAwesomeIcon
-              className="absolute right-[12px] bottom-[10px]"
-              icon={faSearch}
-            />
-          </div>
+        <div className="flex justify-between items-center mt-[30px] px-[20px] pb-[10px]">
+          <Link to="/">
+            <div className="flex items-center text-[white] text-[30px]">
+              <FontAwesomeIcon icon={faBagShopping} />
+              <span>Shop</span>
+            </div>
+          </Link>
 
-          <div className="mx-[20px] flex relative ">
-            <img
-              className=" text-[white]"
-              src="https://theme.hstatic.net/200000642151/1001109463/14/shopping-cart-empty-side-view.png?v=35"
-              width={30}
-              height={30}
-              alt="giỏ hàng"
-            />
-            <span className="w-[20px] h-[24px] bg-[#000] rounded-[50%] text-center block absolute right-[-8px] top-[-8px]">
-              <span className="block  text-[white]">0</span>
+          <div className="w-[100%] px-[10px]">
+            {" "}
+            <Search data={name} onChange={handleSearch} />
+          </div>
+          <div className="text-[25px] text-[white] hover:cursor-pointer" onClick={handlelogoutClick}>
+            <span className="relative ">
+              <FontAwesomeIcon icon={faCartShopping} />
+              <span className="absolute top-[-4px] right-[-4px] bg-[#fb5533] rounded-[50%] border-[white] border-[1px] text-[8px] px-[5px] py-[2px] ">
+                {cartItemsCount}
+              </span>
             </span>
           </div>
-
-          <Menu items = {Menu_Item}>
-            <Avatar
-              className=""
-              alt="Remy Sharp"
-              src="../../assets/images/avata.jpeg"
-            />
-          </Menu>
         </div>
       </div>
     </div>
