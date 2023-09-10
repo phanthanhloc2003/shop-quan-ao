@@ -80,12 +80,12 @@ function Listpage(props) {
 
                         </Paper>
                     </Grid>
-                    <Grid className="flex-1">
+                    <Grid className="flex-1 ">
                         <Paper elevation={0}>
                             <ProductSort onSortChange={handleSortChange} />
                             {loading ? <ProductSkeleton /> : <ProductList data={currentData} />}
 
-                            <Box className="flex  flex-row flex-nowrap justify-center">
+                            <Box className="flex  flex-row flex-nowrap justify-center pb-[20px]">
                                 <Pagination
                                     count={pages}
                                     onChange={(_, v) => {

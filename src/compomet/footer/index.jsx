@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div>
+    <div className="border-t-[5px] border-[#D0011C]">
         <div className="w-full h-[100px] border-b border-gray-300">
             <div className="overflow-hidden grid grid-cols-3 justify-items-center items-center h-full" >
                 <div className="flex items-center">

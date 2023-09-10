@@ -61,7 +61,7 @@ function Header() {
     Navigate("/cart");
   };
   return (
-    <div className="bg-[#F94C30]  ">
+    <div className="bg-[#F94C30]   ">
       <div className="w-auto max-w-[1200px] ml-auto mr-auto ">
         <div className="flex justify-between">
           <div className="flex">

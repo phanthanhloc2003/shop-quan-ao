@@ -4,7 +4,7 @@ import Listpage from "../../layout/ListPage";
 function Siderba() {
   return (
     <Box pt={2}>
-      <div className="border-b-[5px] border-[#D0011C] pb-[40px] ">
+      <div className=" pb-[20px] ">
         <Listpage />
       </div>
     </Box>

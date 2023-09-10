@@ -9,6 +9,8 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ProductFrom from "../../compomet/siderba/component/ProductFrom";
 import Tooltip from "@mui/material/Tooltip";
+import Header from "../../compomet/Header";
+import Footer from "../../compomet/footer";
 
 export default function CartFeature() {
   const total = useSelector(cartTotalSelector);
@@ -98,16 +100,19 @@ export default function CartFeature() {
     setRows(updatedRows);
   };
 
- 
   const handleSubmit = (data) => {
-    console.log(data)
-   
+    console.log(data);
   };
   return (
-    <div style={{ height: 600, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} rowHeight={150} />
-      <p>tổng tiền tất cả là {total} </p>
-      <ProductFrom onsubmit={handleSubmit} />
+    <div>
+      <Header />
+      <div>
+        <DataGrid rows={rows} columns={columns} rowHeight={150} />
+        <p>tổng tiền tất cả là {total} </p>
+        <ProductFrom onsubmit={handleSubmit} />
+      </div>
+
+      <Footer />
     </div>
   );
 }
