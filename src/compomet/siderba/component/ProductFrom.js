@@ -11,14 +11,16 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useState } from "react";
 
-
 export default function ProductForm({ onsubmit }) {
     const [open, setOpen] = useState(false);
 
     const schema = yup.object({
         name: yup
             .string()
-            .matches(/^[A-Za-z\s]+$/, "Họ và tên chỉ được chứa chữ cái và khoảng trắng")
+            .matches(
+                /^[A-Za-z\s]+$/,
+                "Họ và tên chỉ được chứa chữ cái và khoảng trắng"
+            )
             .required("Vui lòng nhập họ và tên"),
         number: yup
             .string()
@@ -53,10 +55,7 @@ export default function ProductForm({ onsubmit }) {
 
     const handleFormSubmit = async (data) => {
         if (onsubmit) {
-            onsubmit({
-                ...data,
-                productName: productName
-            });
+            onsubmit(data);
         }
 
         form.reset();

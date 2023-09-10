@@ -98,31 +98,10 @@ export default function CartFeature() {
     setRows(updatedRows);
   };
 
-  const nodemailer = require('nodemailer');
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: 'lopphanskt92@gmail.com', 
-        pass: 'Ptl2003.' 
-      }
-    });
-    const sendEmail = (userData) => {
-      const mailOptions = {
-        from: 'your-email@gmail.com',
-        to: userData.email, 
-        subject: 'Thông báo mua sản phẩm', 
-        text: `Bạn đã mua sản phẩm ${userData.productName}` 
-      };
-      transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.error(error);
-        } else {
-          console.log('Email đã được gửi: ' + info.response);
-        }
-      });
-    };
+ 
   const handleSubmit = (data) => {
-    sendEmail(data);
+    console.log(data)
+   
   };
   return (
     <div style={{ height: 600, width: "100%" }}>
