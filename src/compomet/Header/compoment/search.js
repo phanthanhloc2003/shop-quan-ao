@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Tippy from "@tippyjs/react/headless";
 import WrapperSearch from "../../poper/wrapperSearch";
 
-function Search({ data = [], onChange }) {
+function Search({ data = [], onChange, onClickSearch }) {
     const [values, setValues] = useState("");
     const [isListVisible, setIsListVisible] = useState(false);
     const [matchingCategories, setMatchingCategories] = useState([]);
@@ -41,6 +41,10 @@ function Search({ data = [], onChange }) {
         setIsListVisible(false);
         if (onChange) onChange(categoryId);
     };
+
+    const onHandleSearch = () => {
+        onClickSearch(values);
+    }
 
     return (
         <Tippy
@@ -92,7 +96,7 @@ function Search({ data = [], onChange }) {
 
                 <button
                     className="bg-[#fb5533] text-[white] px-[15px] h-[34px] ml-[10px]  rounded-[5px] "
-
+                    onClick={onHandleSearch}
                 >
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>

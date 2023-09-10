@@ -21,7 +21,6 @@ function Listpage(props) {
     });
 
     const searchId = useSelector(state => state.search.searchItem)
-    console.log(searchId)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -29,17 +28,16 @@ function Listpage(props) {
                 const { data } = await productListApi.getAll({
                     _sort: 'salePrice',
                     _order: sortOrder,
+                    name_like: props?.searchParam ?? ""
                 });
                 setProductList(data);
-
-
             } catch (error) {
                 console.log('Failed to get data', error);
             }
             setLoading(false);
         };
         fetchData();
-    }, [sortOrder]);
+    }, [sortOrder, props.searchParam]);
 
 
 

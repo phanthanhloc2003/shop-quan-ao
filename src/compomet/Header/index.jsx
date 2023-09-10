@@ -22,7 +22,7 @@ import { cartItemsCountSelector } from "../../layout/Cart/slectors";
 import { useNavigate } from "react-router-dom";
 import { addSearchID } from "./compoment/searchSlice";
 
-function Header() {
+function Header({onClickHeaderSearch}) {
   const dispatch = useDispatch();
   const cartItemsCount = useSelector(cartItemsCountSelector);
 
@@ -60,6 +60,10 @@ function Header() {
   const handlelogoutClick = () => {
     Navigate("/cart");
   };
+
+  const onClickSearch = (params) => {
+    onClickHeaderSearch(params || "");
+  }
   return (
     <div className="bg-[#F94C30]   ">
       <div className="w-auto max-w-[1200px] ml-auto mr-auto ">
@@ -197,7 +201,7 @@ function Header() {
 
           <div className="w-[100%] px-[10px]">
             {" "}
-            <Search data={name} onChange={handleSearch} />
+            <Search data={name} onChange={handleSearch} onClickSearch={onClickSearch} />
           </div>
           <div className="text-[25px] text-[white] hover:cursor-pointer" onClick={handlelogoutClick}>
             <span className="relative ">
