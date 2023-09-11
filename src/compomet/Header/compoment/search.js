@@ -8,8 +8,13 @@ function Search({ data = [], onChange, onClickSearch }) {
     const [values, setValues] = useState("");
     const [isListVisible, setIsListVisible] = useState(false);
     const [matchingCategories, setMatchingCategories] = useState([]);
-
+    const [searchHistory, setSearchHistory] = useState([]);
     const wrapperRef = useRef(null);
+
+    useEffect(() => {
+        const searchHistoryFromLocalStorage = JSON.parse(localStorage.getItem("searchHistory")) || [];
+        setSearchHistory(searchHistoryFromLocalStorage);
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -39,6 +44,11 @@ function Search({ data = [], onChange, onClickSearch }) {
 
     const handleSearch = (categoryId) => {
         setIsListVisible(false);
+
+        const updatedSearchHistory = [...searchHistory, values];
+        setSearchHistory(updatedSearchHistory);
+        localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
+
         if (onChange) onChange(categoryId);
     };
 
@@ -76,7 +86,7 @@ function Search({ data = [], onChange, onClickSearch }) {
                                     <ul className="hover:bg-[#f5f5f5] py-[5px]">
                                         <li className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
                                             {" "}
-                                            {value.category.search}
+                                            {value.name}
                                         </li>
                                     </ul>
                                 </div>

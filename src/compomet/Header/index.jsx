@@ -63,6 +63,7 @@ function Header({onClickHeaderSearch}) {
 
   const onClickSearch = (params) => {
     onClickHeaderSearch(params || "");
+    
   }
   return (
     <div className="bg-[#F94C30]   ">
@@ -184,7 +185,7 @@ function Header({onClickHeaderSearch}) {
                   <Avatar
                     sx={{ width: 30, height: 30 }}
                     alt="Remy Sharp"
-                    src="https://scontent.fdad5-1.fna.fbcdn.net/v/t39.30808-6/307870087_1750420278690978_2333351853473382845_n.jpg?stp=dst-jpg_s417x417&_nc_cat=106&ccb=1-7&_nc_sid=da31f3&_nc_ohc=jklSN18DCm8AX9wSzz8&_nc_ht=scontent.fdad5-1.fna&oh=00_AfB9Ce6uBpY7FXOSHPvGrPBhY3Ts72LxW9mcJSyQ3PBscw&oe=64F10209"
+                    src="https://antimatter.vn/wp-content/uploads/2022/02/tai-hinh-nen-dien-thoai-cute-chat-ngau.jpg"
                   />
                 </div>
               </Tippy>

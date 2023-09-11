@@ -30,7 +30,6 @@ export default function CartFeature() {
   }, [cartItems]);
 
   const columns = [
-    { field: "id", headerName: "ID", width: 70 },
     {
       field: "name",
       headerName: "Tên sản phẩm",
@@ -108,8 +107,13 @@ export default function CartFeature() {
       <Header />
       <div>
         <DataGrid rows={rows} columns={columns} rowHeight={150} />
-        <p>tổng tiền tất cả là {total} </p>
-        <ProductFrom onsubmit={handleSubmit} />
+        <div className="flex justify-end  mr-[20px] h-[50px] items-center ">
+          {" "}
+        
+            <p className="font-bold text-[15px] mr-[30px]">tổng thanh toán sản phẩm là: <span className="text-[#EE4D2D]"> {total}</span> </p>
+            <ProductFrom  onsubmit={handleSubmit} />
+          
+        </div>
       </div>
 
       <Footer />

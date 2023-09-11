@@ -7,6 +7,7 @@ function Homepage() {
   const [searchParam, setSearchParam] = useState("");
   const onClickSearch = function (params) {
     setSearchParam(params);
+  
   };
   return (
     <div>

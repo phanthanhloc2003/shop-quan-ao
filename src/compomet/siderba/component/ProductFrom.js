@@ -62,8 +62,8 @@ export default function ProductForm({ onsubmit }) {
         setOpen(false);
     };
     return (
-        <div>
-            <Button variant="outlined" onClick={handleClickOpen}>
+        <div className="">
+            <Button className="w-[100px]" variant="outlined" color="error" onClick={handleClickOpen}>
                 Mua
             </Button>
 
