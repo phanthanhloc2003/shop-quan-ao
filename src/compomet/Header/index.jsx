@@ -38,8 +38,8 @@ function Header({onClickHeaderSearch}) {
   const logedInUser = useSelector((state) => state.user.current);
   const isLoggedIn = !!logedInUser.id;
 
-  const handleSearch = (id) => {
-    dispatch(addSearchID({ id: id }));
+  const handleSearch = (item) => {
+    onClickHeaderSearch(item || "");
   
   };
 
@@ -63,6 +63,7 @@ function Header({onClickHeaderSearch}) {
 
   const onClickSearch = (params) => {
     onClickHeaderSearch(params || "");
+  
     
   }
   return (

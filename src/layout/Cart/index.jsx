@@ -11,6 +11,7 @@ import ProductFrom from "../../compomet/siderba/component/ProductFrom";
 import Tooltip from "@mui/material/Tooltip";
 import Header from "../../compomet/Header";
 import Footer from "../../compomet/footer";
+import emailjs from "emailjs-com";
 
 export default function CartFeature() {
   const total = useSelector(cartTotalSelector);
@@ -99,8 +100,16 @@ export default function CartFeature() {
     setRows(updatedRows);
   };
 
-  const handleSubmit = (data) => {
-    console.log(data);
+  const handleSubmit = (params) => {
+      
+    emailjs.send("service_almypss", "template_e0w3kw8", params)
+    .then(function(res){
+      alert("Success!" + res.status)
+    })
+    .catch(function(error) {
+      alert("Error: " + error);
+    });
+  
   };
   return (
     <div>

@@ -7,7 +7,7 @@ import WrapperSearch from "../../poper/wrapperSearch";
 function Search({ data = [], onChange, onClickSearch }) {
     const [values, setValues] = useState("");
     const [isListVisible, setIsListVisible] = useState(false);
-    const [matchingCategories, setMatchingCategories] = useState([]);
+
     const [searchHistory, setSearchHistory] = useState([]);
     const wrapperRef = useRef(null);
 
@@ -39,11 +39,10 @@ function Search({ data = [], onChange, onClickSearch }) {
         setIsListVisible(true);
     };
 
-    const handleSearch = (categoryId) => {
+    const handleSearch = (item) => {
         setIsListVisible(false);
 
-
-        if (onChange) onChange(categoryId);
+        if (onChange) onChange(item);
     };
 
     const onHandleSearch = () => {
@@ -79,11 +78,11 @@ function Search({ data = [], onChange, onClickSearch }) {
                             </div>
 
 
-                            <div>
+                            <div >
 
                                 <ul className="hover:bg-[#f5f5f5] py-[5px]">
                                     {searchHistory.map((searchItem, index) => (
-                                        <li key={index} className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
+                                        <li onClick={() => handleSearch(searchItem)} key={index} className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
                                             {searchItem}
                                         </li>
                                     ))}

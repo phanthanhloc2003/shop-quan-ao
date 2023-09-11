@@ -54,8 +54,11 @@ export default function ProductForm({ onsubmit }) {
     };
 
     const handleFormSubmit = async (data) => {
+        console.log(data)
+
         if (onsubmit) {
             onsubmit(data);
+
         }
 
         form.reset();
