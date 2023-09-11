@@ -13,6 +13,8 @@ function Search({ data = [], onChange, onClickSearch }) {
 
     useEffect(() => {
         const searchHistoryFromLocalStorage = JSON.parse(localStorage.getItem("searchHistory")) || [];
+        console.log(searchHistoryFromLocalStorage)
+
         setSearchHistory(searchHistoryFromLocalStorage);
     }, []);
 
@@ -34,25 +36,20 @@ function Search({ data = [], onChange, onClickSearch }) {
         const { value } = event.target;
         setValues(value);
 
-        const matched = data.filter((item) =>
-            item.name.toLowerCase().includes(value.toLowerCase())
-        );
-        setMatchingCategories(matched.slice(0, 5));
-
         setIsListVisible(true);
     };
 
     const handleSearch = (categoryId) => {
         setIsListVisible(false);
 
-        const updatedSearchHistory = [...searchHistory, values];
-        setSearchHistory(updatedSearchHistory);
-        localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
 
         if (onChange) onChange(categoryId);
     };
 
     const onHandleSearch = () => {
+        const updatedSearchHistory = [...searchHistory, values];
+        setSearchHistory(updatedSearchHistory);
+        localStorage.setItem("searchHistory", JSON.stringify(updatedSearchHistory));
         onClickSearch(values);
     }
 
@@ -81,16 +78,18 @@ function Search({ data = [], onChange, onClickSearch }) {
                                 </a>
                             </div>
 
-                            {matchingCategories.map((value) => (
-                                <div key={value.id} onClick={() => handleSearch(value.category.id)}>
-                                    <ul className="hover:bg-[#f5f5f5] py-[5px]">
-                                        <li className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
-                                            {" "}
-                                            {value.name}
+
+                            <div>
+
+                                <ul className="hover:bg-[#f5f5f5] py-[5px]">
+                                    {searchHistory.map((searchItem, index) => (
+                                        <li key={index} className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
+                                            {searchItem}
                                         </li>
-                                    </ul>
-                                </div>
-                            ))}
+                                    ))}
+                                </ul>
+                            </div>
+
                         </div>
                     </WrapperSearch>
                 </div>
