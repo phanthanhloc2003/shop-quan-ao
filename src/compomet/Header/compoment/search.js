@@ -4,16 +4,18 @@ import { useState, useEffect, useRef } from "react";
 import Tippy from "@tippyjs/react/headless";
 import WrapperSearch from "../../poper/wrapperSearch";
 
-function Search({ data = [], onChange, onClickSearch }) {
+function Search({ onChange, onClickSearch }) {
     const [values, setValues] = useState("");
     const [isListVisible, setIsListVisible] = useState(false);
 
     const [searchHistory, setSearchHistory] = useState([]);
     const wrapperRef = useRef(null);
+    const [showSearch, setShowSearch] = useState([])
 
     useEffect(() => {
         const searchHistoryFromLocalStorage = JSON.parse(localStorage.getItem("searchHistory")) || [];
-        console.log(searchHistoryFromLocalStorage)
+        const reverseSearch = searchHistoryFromLocalStorage.reverse();
+        setShowSearch(reverseSearch.slice(0, 5))
 
         setSearchHistory(searchHistoryFromLocalStorage);
     }, []);
@@ -80,9 +82,9 @@ function Search({ data = [], onChange, onClickSearch }) {
 
                             <div >
 
-                                <ul className="hover:bg-[#f5f5f5] py-[5px]">
-                                    {searchHistory.map((searchItem, index) => (
-                                        <li onClick={() => handleSearch(searchItem)} key={index} className="pl-[15px] font-light text-[#212121] hover:cursor-pointer">
+                                <ul className=" py-[5px]">
+                                    {showSearch.map((searchItem, index) => (
+                                        <li onClick={() => handleSearch(searchItem)} key={index} className="pl-[15px] font-light text-[#212121] hover:cursor-pointer hover:bg-[#f5f5f5] py-[10px]">
                                             {searchItem}
                                         </li>
                                     ))}
