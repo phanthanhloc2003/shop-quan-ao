@@ -41,10 +41,11 @@ function Search({ onChange, onClickSearch }) {
         setIsListVisible(true);
     };
 
-    const handleSearch = (item) => {
+    const handleSearch = (values) => {
         setIsListVisible(false);
 
-        if (onChange) onChange(item);
+
+        if (onChange) onChange(values);
     };
 
     const onHandleSearch = () => {

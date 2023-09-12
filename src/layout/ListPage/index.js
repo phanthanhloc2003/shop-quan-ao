@@ -15,10 +15,16 @@ function Listpage(props) {
     const [pageIndex, setPageIndex] = useState(1);
     const [sortOrder, setSortOrder] = useState("asc");
     const [categoryId, setCategoryId] = useState(0);
+
+    const searchProduct = useSelector(state => state.search.searchItem)
+
+
     const [priceProduct, setPriceProduct] = useState({
         priceStart: 0,
         priceEnd: 0,
     });
+
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,7 +32,7 @@ function Listpage(props) {
                 const { data } = await productListApi.getAll({
                     _sort: "salePrice",
                     _order: sortOrder,
-                    name_like: props?.searchParam ?? "",
+                    name_like: searchProduct ?? "",
                 });
                 setProductList(data);
             } catch (error) {
@@ -35,8 +41,8 @@ function Listpage(props) {
             setLoading(false);
         };
         fetchData();
-        console.log(props.searchParam);
-    }, [sortOrder, props.searchParam]);
+
+    }, [sortOrder, searchProduct]);
 
     const handleSortChange = (newSortOrder) => {
         setSortOrder(newSortOrder);

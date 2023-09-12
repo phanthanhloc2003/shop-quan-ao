@@ -4,26 +4,17 @@ const searchSlice = createSlice({
     name: "search",
     initialState: {
         selectedProduct: null,
-        searchItem: [],
+        searchItem: null,
     },
 
     reducers: {
         addSearchID(state, action) {
             const searchID = action.payload;
-            state.searchItem.push(searchID);
+            state.searchItem = searchID;
+
         },
 
-        setSearchResult(state, action) {
-            const productId = action.payload;
 
-            const foundProduct = state.searchItem.find(
-                (product) => product.id === productId.id
-            );
-
-            if (foundProduct) {
-                state.selectedProduct = foundProduct;
-            }
-        },
     },
 });
 

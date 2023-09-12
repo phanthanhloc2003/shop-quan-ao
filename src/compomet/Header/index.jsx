@@ -22,7 +22,7 @@ import { cartItemsCountSelector } from "../../layout/Cart/slectors";
 import { useNavigate } from "react-router-dom";
 import { addSearchID } from "./compoment/searchSlice";
 
-function Header({onClickHeaderSearch}) {
+function Header() {
   const dispatch = useDispatch();
   const cartItemsCount = useSelector(cartItemsCountSelector);
 
@@ -38,8 +38,8 @@ function Header({onClickHeaderSearch}) {
   const logedInUser = useSelector((state) => state.user.current);
   const isLoggedIn = !!logedInUser.id;
 
-  const handleSearch = (item) => {
-    onClickHeaderSearch(item || "");
+  const handleSearch = (values) => {
+    dispatch(addSearchID(values))
   
   };
 
@@ -62,8 +62,8 @@ function Header({onClickHeaderSearch}) {
   };
 
   const onClickSearch = (params) => {
-    onClickHeaderSearch(params || "");
-  
+     dispatch(addSearchID(params))
+ 
     
   }
   return (

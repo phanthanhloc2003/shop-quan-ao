@@ -4,18 +4,16 @@ import Footer from "../../compomet/footer";
 import Siderba from "../../compomet/siderba";
 
 function Homepage() {
-  const [searchParam, setSearchParam] = useState("");
-  const onClickSearch = function (params) {
-    setSearchParam(params);
+ 
   
-  };
+  
   return (
     <div>
       <div>
-        <Header onClickHeaderSearch={onClickSearch} />
+        <Header  />
       </div>
       <div>
-        <Siderba searchParam={searchParam} />
+        <Siderba  />
       </div>
       <div>
         <Footer />
