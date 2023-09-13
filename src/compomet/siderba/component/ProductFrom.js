@@ -18,8 +18,8 @@ export default function ProductForm({ onsubmit }) {
         name: yup
             .string()
             .matches(
-                /^[A-Za-z\s]+$/,
-                "Họ và tên chỉ được chứa chữ cái và khoảng trắng"
+                /^[A-Za-z\sÀ-ỹ]+$/,
+                "Họ và tên chỉ được chứa chữ cái, khoảng trắng và dấu"
             )
             .required("Vui lòng nhập họ và tên"),
         number: yup
@@ -54,7 +54,7 @@ export default function ProductForm({ onsubmit }) {
     };
 
     const handleFormSubmit = async (data) => {
-        console.log(data)
+
 
         if (onsubmit) {
             onsubmit(data);

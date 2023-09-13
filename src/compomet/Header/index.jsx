@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../Auth/compoment/userSlice";
 import { Link } from "react-router-dom";
-import Tippy from "@tippyjs/react/headless"; // Import thư viện Tippy
+import Tippy from "@tippyjs/react/headless"; 
 import Wrapper from "../poper/Wrapper";
 import { useEffect, useState } from "react";
 import Search from "./compoment/search";
@@ -39,7 +39,7 @@ function Header() {
   const isLoggedIn = !!logedInUser.id;
 
   const handleSearch = (values) => {
-    dispatch(addSearchID(values))
+    dispatch(addSearchID(values || ""))
   
   };
 
@@ -62,7 +62,7 @@ function Header() {
   };
 
   const onClickSearch = (params) => {
-     dispatch(addSearchID(params))
+     dispatch(addSearchID(params || ""))
  
     
   }

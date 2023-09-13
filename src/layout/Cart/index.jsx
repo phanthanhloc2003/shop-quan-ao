@@ -17,6 +17,7 @@ export default function CartFeature() {
   const total = useSelector(cartTotalSelector);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  
   const [rows, setRows] = useState([]);
   useEffect(() => {
     const updatedRows = cartItems.map((item) => ({
@@ -100,13 +101,25 @@ export default function CartFeature() {
     setRows(updatedRows);
   };
 
-  const handleSubmit = (params) => {
+  const handleSubmit = (param) => {
+      const {name,number, email,address} = param;
+      const product = cartItems[0].data[0].name
+   
+    const params = {
+      from_name: name,
+      phone_number: number ,
+      address: address,
+      email_id: email,
+      message: `bạn đã đặt hàng thành công ${product} `
+    };
       
-    emailjs.send("service_almypss", "template_e0w3kw8", params)
+    emailjs.send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
     .then(function(res){
-      alert("Success!" + res.status)
+     
+      alert("bạn đã đặt hành thành công")
     })
     .catch(function(error) {
+    
       alert("Error: " + error);
     });
   
@@ -120,8 +133,8 @@ export default function CartFeature() {
           {" "}
         
             <p className="font-bold text-[15px] mr-[30px]">tổng thanh toán sản phẩm là: <span className="text-[#EE4D2D]"> {total}</span> </p>
-            <ProductFrom  onsubmit={handleSubmit} />
-          
+           
+          {cartItems.length > 0 ?  <ProductFrom  onsubmit={handleSubmit} /> : "" }
         </div>
       </div>
 
