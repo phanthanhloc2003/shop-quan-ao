@@ -110,7 +110,8 @@ export default function CartFeature() {
       phone_number: number ,
       address: address,
       email_id: email,
-      message: `bạn đã đặt hàng thành công ${product} `
+      message: `bạn đã đặt hàng thành công ${product} `,
+      total : `${total}`
     };
       
     emailjs.send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
