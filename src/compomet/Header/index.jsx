@@ -62,6 +62,7 @@ function Header() {
   };
 
   const onClickSearch = (params) => {
+  Navigate("/")
      dispatch(addSearchID(params || ""))
  
     
