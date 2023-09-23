@@ -17,13 +17,13 @@ export default function CartFeature() {
   const total = useSelector(cartTotalSelector);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
-  
+
   const [rows, setRows] = useState([]);
   useEffect(() => {
     const updatedRows = cartItems.map((item) => ({
       id: item.id,
       name: item.data[0],
-      originalPrice: item.data[0].originalPrice,
+      originalPrice: item.data[0],
       quantity: item.quantity,
       soTien: item.data[0].salePrice * item.quantity,
       thaoTac: item.data[0],
@@ -35,7 +35,7 @@ export default function CartFeature() {
     {
       field: "name",
       headerName: "Tên sản phẩm",
-      width: 400,
+      width: 500,
       renderCell: (cartItems) => (
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
@@ -49,21 +49,56 @@ export default function CartFeature() {
         </div>
       ),
     },
-    { field: "originalPrice", headerName: "Giá", width: 130 },
+    {
+      field: "originalPrice",
+      headerName: "Đơn Giá",
+      width: 170,
+      renderCell: (params,index) => (
+        <div className="flex" key={index} > 
+          <p className="mr-[10px] text-[#757575] line-through">
+          {new Intl.NumberFormat("vi-VN", {
+            style: "currency",
+            currency: "VND",
+          }).format(params.row.name.Listedprice)}
+            </p>
+          <p>
+          {new Intl.NumberFormat("vi-VN", {
+            style: "currency",
+            currency: "VND",
+          }).format(params.row.name.salePrice)}
+            </p>
+          
+        </div>
+        
+      ),
+    },
     {
       field: "quantity",
       headerName: "Số Lượng",
       type: "number",
-      width: 180,
+      width: 150,
       renderCell: (params) => (
         <TextField
-          style={{ width: "50px" }}
+          style={{ width: "50px"  }}
           value={params.value}
           onChange={(event) => handleQuantityChange(event, params.row)}
         />
       ),
     },
-    { field: "soTien", headerName: "Số tiền", sortable: false, width: 160 },
+    {
+      field: "soTien",
+      headerName: "Số tiền",
+      sortable: false,
+      width: 200,
+      renderCell: (params) => (
+        <div className="text-[#EE4D2D]">
+          {new Intl.NumberFormat("vi-VN", {
+            style: "currency",
+            currency: "VND",
+          }).format(params.value)}
+        </div>
+      ),
+    },
     {
       field: "thaoTac",
       headerName: "Thao Tác",
@@ -102,28 +137,32 @@ export default function CartFeature() {
   };
 
   const handleSubmit = (param) => {
-      const {name,number, email,address} = param;
-      const product = cartItems[0].data[0].name
+    const { name, number, email, address } = param;
+    const product = cartItems[0].data[0].name;
    
+
     const params = {
       from_name: name,
-      phone_number: number ,
+      phone_number: number,
       address: address,
       email_id: email,
       message: `bạn đã đặt hàng thành công ${product} `,
-      total : `${total}`
+      total:  new Intl.NumberFormat("vi-VN", {
+        style: "currency",
+        currency: "VND",
+      }).format(total),
     };
+
+    emailjs
+      .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
+      .then(function (res) {
+        alert("bạn đã đặt hành thành công");
+      })
+      .catch(function (error) {
+        alert("Error: " + error);
+      });
+
       
-    emailjs.send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
-    .then(function(res){
-     
-      alert("bạn đã đặt hành thành công")
-    })
-    .catch(function(error) {
-    
-      alert("Error: " + error);
-    });
-  
   };
   return (
     <div>
@@ -132,10 +171,16 @@ export default function CartFeature() {
         <DataGrid rows={rows} columns={columns} rowHeight={150} />
         <div className="flex justify-end  mr-[20px] h-[50px] items-center ">
           {" "}
-        
-            <p className="font-bold text-[15px] mr-[30px]">tổng thanh toán sản phẩm là: <span className="text-[#EE4D2D]"> {total}</span> </p>
-           
-          {cartItems.length > 0 ?  <ProductFrom  onsubmit={handleSubmit} /> : "" }
+          <p className="font-bold text-[15px] mr-[30px]">
+            tổng thanh toán sản phẩm là:{" "}
+            <span className="text-[#EE4D2D]">
+              {new Intl.NumberFormat("vi-VN", {
+                style: "currency",
+                currency: "VND",
+              }).format(total)}
+            </span>{" "}
+          </p>
+          {cartItems.length > 0 ? <ProductFrom onsubmit={handleSubmit} /> : ""}
         </div>
       </div>
 

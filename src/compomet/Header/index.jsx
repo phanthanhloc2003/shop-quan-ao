@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../Auth/compoment/userSlice";
 import { Link } from "react-router-dom";
-import Tippy from "@tippyjs/react/headless"; 
+import Tippy from "@tippyjs/react/headless";
 import Wrapper from "../poper/Wrapper";
 import { useEffect, useState } from "react";
 import Search from "./compoment/search";
@@ -21,6 +21,7 @@ import productListApi from "../../api/productListApi";
 import { cartItemsCountSelector } from "../../layout/Cart/slectors";
 import { useNavigate } from "react-router-dom";
 import { addSearchID } from "./compoment/searchSlice";
+
 
 function Header() {
   const dispatch = useDispatch();
@@ -39,8 +40,7 @@ function Header() {
   const isLoggedIn = !!logedInUser.id;
 
   const handleSearch = (values) => {
-    dispatch(addSearchID(values || ""))
-  
+    dispatch(addSearchID(values || ""));
   };
 
   useEffect(() => {
@@ -62,11 +62,9 @@ function Header() {
   };
 
   const onClickSearch = (params) => {
-  Navigate("/")
-     dispatch(addSearchID(params || ""))
- 
-    
-  }
+    Navigate("/");
+    dispatch(addSearchID(params || ""));
+  };
   return (
     <div className="bg-[#F94C30]   ">
       <div className="w-auto max-w-[1200px] ml-auto mr-auto ">
@@ -86,9 +84,7 @@ function Header() {
                 placement="bottom"
                 offset={[-45, 10]}
                 render={(attrs) => (
-                  <div className="" tabIndex="-1" {...attrs}>
-                   
-                  </div>
+                  <div className="" tabIndex="-1" {...attrs}></div>
                 )}
               >
                 <p className="text-[#FFF6F5]  text-[15px] font-light hover:text-opacity-70  hover:cursor-pointer">
@@ -178,7 +174,17 @@ function Header() {
                 render={(attrs) => (
                   <div className="" tabIndex="-1" {...attrs}>
                     <WrapperName>
-                      <button onClick={handleLogout}>Đăng Xuất</button>
+                      <div className="flex flex-col  items-start pl-[10px] ">
+                        <Link to= "/account/profile"
+                   
+                         className="py-[5px] hover:text-[#26aa99] font-medium">Tài Khoản Của Tôi</Link>
+                        <Link to="/account/order" 
+                           
+                        className="py-[5px]  hover:text-[#26aa99] font-medium">Đơn Mua</Link>
+                        <button className="py-[5px]  hover:text-[#26aa99] font-medium" onClick={handleLogout}>
+                          Đăng Xuất
+                        </button>
+                      </div>
                     </WrapperName>
                   </div>
                 )}
@@ -204,9 +210,16 @@ function Header() {
 
           <div className="w-[100%] px-[10px]">
             {" "}
-            <Search data={name} onChange={handleSearch} onClickSearch={onClickSearch} />
+            <Search
+              data={name}
+              onChange={handleSearch}
+              onClickSearch={onClickSearch}
+            />
           </div>
-          <div className="text-[25px] text-[white] hover:cursor-pointer" onClick={handlelogoutClick}>
+          <div
+            className="text-[25px] text-[white] hover:cursor-pointer"
+            onClick={handlelogoutClick}
+          >
             <span className="relative ">
               <FontAwesomeIcon icon={faCartShopping} />
               <span className="absolute top-[-4px] right-[-4px] bg-[#fb5533] rounded-[50%] border-[white] border-[1px] text-[8px] px-[5px] py-[2px] ">

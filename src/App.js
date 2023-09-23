@@ -6,6 +6,11 @@ import SinUp from "./layout/Sigup";
 import Listpage from "./layout/ListPage";
 import DetailPage from "./layout/DetailPage";
 import CartFeature from "./layout/Cart";
+import Account from "./layout/account";
+import Profile from "./compomet/RightPanel/compoment/Profile";
+import Order from "./compomet/RightPanel/compoment/Order";
+
+
 
 function App() {
   return (
@@ -21,6 +26,15 @@ function App() {
           <Route path="listpage" element={<Listpage />} />
           <Route path="detail/:id" element={<DetailPage />} />
           <Route path="/cart" element={<CartFeature />} />
+          <Route path="/account" element={<Account />} >
+            <Route path="/account/profile" element={<Profile />} />
+            <Route path="/account/order" element={<Order />} >
+
+            </Route>
+          </Route>
+
+
+
         </Routes>
       </BrowserRouter>
     </div>
