@@ -12,13 +12,21 @@ import Tooltip from "@mui/material/Tooltip";
 import Header from "../../compomet/Header";
 import Footer from "../../compomet/footer";
 import emailjs from "emailjs-com";
+import { receiveProduct } from "../account/accountSlice";
 
 export default function CartFeature() {
   const total = useSelector(cartTotalSelector);
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  
+   
+
+  const product = cartItems.map(item => item.data)
+  const dataValues = product.map(item => item[0])
+
 
   const [rows, setRows] = useState([]);
+  // console.log(rows)
   useEffect(() => {
     const updatedRows = cartItems.map((item) => ({
       id: item.id,
@@ -137,30 +145,45 @@ export default function CartFeature() {
   };
 
   const handleSubmit = (param) => {
-    const { name, number, email, address } = param;
-    const product = cartItems[0].data[0].name;
+    // const { name, number, email, address } = param;
+    // const product = cartItems[0].data[0].name;
    
 
-    const params = {
-      from_name: name,
-      phone_number: number,
-      address: address,
-      email_id: email,
-      message: `bạn đã đặt hàng thành công ${product} `,
-      total:  new Intl.NumberFormat("vi-VN", {
-        style: "currency",
-        currency: "VND",
-      }).format(total),
-    };
-
-    emailjs
-      .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
-      .then(function (res) {
-        alert("bạn đã đặt hành thành công");
+    try {
+      // const params = {
+      //   from_name: name,
+      //   phone_number: number,
+      //   address: address,
+      //   email_id: email,
+      //   message: `bạn đã đặt hàng thành công ${product} `,
+      //   total:  new Intl.NumberFormat("vi-VN", {
+      //     style: "currency",
+      //     currency: "VND",
+      //   }).format(total),
+      // };
+  
+      // emailjs
+      //   .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
+      //   .then(function (res) {
+      //     alert("bạn đã đặt hành thành công");
+      //   })
+      //   .catch(function (error) {
+      //     alert("Error: " + error);
+      //   });
+      const action = receiveProduct({
+       
+        data: rows,
+      
+            
       })
-      .catch(function (error) {
-        alert("Error: " + error);
-      });
+      dispatch(action)
+    } catch (error) {
+      
+    }
+
+   
+
+
 
       
   };

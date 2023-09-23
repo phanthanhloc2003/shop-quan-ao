@@ -8,7 +8,11 @@ import Order from "./compoment/Order";
 
 function RightPanel() {
     return (
-        <Paper style={{ padding: "0 15px" }}>
+        <Paper style={{
+            padding: "0 15px", border: "none",
+            background: "transparent",
+            boxShadow: "none",
+        }}>
             <Routes>
                 <Route path="/Profile" element={<Profile />} />
                 <Route path="/Order" element={<Order />} />

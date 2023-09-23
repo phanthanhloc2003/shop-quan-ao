@@ -16,8 +16,9 @@ const cartSlice = createSlice({
             state.showMiniCart = false;
         },
         addToCart(state, action) {
-            console.log(state.cartItems)
+
             const newItem = action.payload;
+
             const index = state.cartItems.findIndex((x) => x.id === newItem.id);
 
             if (index >= 0) {
@@ -36,7 +37,7 @@ const cartSlice = createSlice({
         removeFromCart(state, action) {
             const idNeedToRemove = action.payload;
             state.cartItems = state.cartItems.filter((x) => x.id !== idNeedToRemove.id);
-            console.log("Removed item with ID:", idNeedToRemove.id);
+
         }
 
 
