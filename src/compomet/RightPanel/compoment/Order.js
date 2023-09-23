@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 function Order() {
     const receivedItem = useSelector((state) => state.history.receivedItems);
 
-    const datavalue = receivedItem.data
+
 
 
 
@@ -16,8 +16,8 @@ function Order() {
 
         </div>;
     }
-    // const datavalue = receivedItem.map(item => item.data)
-    // console.log(datavalue)
+    const datavalue = receivedItem.data
+
     return (
 
 
