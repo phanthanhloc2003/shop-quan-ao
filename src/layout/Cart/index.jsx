@@ -150,26 +150,26 @@ export default function CartFeature() {
    
 
     try {
-      // const params = {
-      //   from_name: name,
-      //   phone_number: number,
-      //   address: address,
-      //   email_id: email,
-      //   message: `bạn đã đặt hàng thành công ${product} `,
-      //   total:  new Intl.NumberFormat("vi-VN", {
-      //     style: "currency",
-      //     currency: "VND",
-      //   }).format(total),
-      // };
+      const params = {
+        from_name: name,
+        phone_number: number,
+        address: address,
+        email_id: email,
+        message: `bạn đã đặt hàng thành công ${product} `,
+        total:  new Intl.NumberFormat("vi-VN", {
+          style: "currency",
+          currency: "VND",
+        }).format(total),
+      };
   
-      // emailjs
-      //   .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
-      //   .then(function (res) {
-      //     alert("bạn đã đặt hành thành công");
-      //   })
-      //   .catch(function (error) {
-      //     alert("Error: " + error);
-      //   });
+      emailjs
+        .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
+        .then(function (res) {
+          alert("bạn đã đặt hành thành công");
+        })
+        .catch(function (error) {
+          alert("Error: " + error);
+        });
       const action = receiveProduct({
        
         data: rows,
