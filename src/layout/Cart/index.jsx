@@ -145,8 +145,8 @@ export default function CartFeature() {
   };
 
   const handleSubmit = (param) => {
-    // const { name, number, email, address } = param;
-    // const product = cartItems[0].data[0].name;
+    const { name, number, email, address } = param;
+    const product = cartItems[0].data[0].name;
    
 
     try {
