@@ -7,6 +7,8 @@ import ProductInfo from "../../compomet/siderba/component/ProductInfo";
 import AddToCartFrom from "../../compomet/siderba/component/AddToCartFrom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Cart/cartSlice";
+import DetailSkeleton from "./Detailskeleton";
+
 
 function Detailpage() {
     const { id } = useParams();
@@ -18,7 +20,9 @@ function Detailpage() {
 
 
     if (loading) {
-        return <Box>loading</Box>;
+        return <Box>
+            <DetailSkeleton />
+        </Box>;
     }
 
     const handleToCartFrom = ({ quantity }) => {

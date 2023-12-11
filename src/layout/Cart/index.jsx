@@ -165,6 +165,7 @@ export default function CartFeature() {
       emailjs
         .send("service_almypss", "template_e0w3kw8", params, "JlKiXkWSnPUMGBbjL")
         .then(function (res) {
+         
           alert("bạn đã đặt hành thành công");
         })
         .catch(function (error) {

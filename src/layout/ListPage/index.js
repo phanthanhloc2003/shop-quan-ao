@@ -17,7 +17,7 @@ function Listpage(props) {
     const [categoryId, setCategoryId] = useState(0);
 
     const searchProduct = useSelector(state => state.search.searchItem)
-
+    const [filtersChanged, setFiltersChanged] = useState(false);
 
     const [priceProduct, setPriceProduct] = useState({
         priceStart: 0,
@@ -30,23 +30,28 @@ function Listpage(props) {
         const fetchData = async () => {
             try {
                 const { data } = await productListApi.getAll({
+                    name_like: searchProduct ?? "",
                     _sort: "salePrice",
                     _order: sortOrder,
-                    name_like: searchProduct ?? "",
+
                 });
                 setProductList(data);
             } catch (error) {
                 console.log("Failed to get data", error);
             }
             setLoading(false);
+
         };
         fetchData();
+        setFiltersChanged(false);
 
-    }, [sortOrder, searchProduct]);
+    }, [sortOrder, searchProduct, filtersChanged]);
 
     const handleSortChange = (newSortOrder) => {
         setSortOrder(newSortOrder);
     };
+
+
     const handleFiltersChange = (data) => {
         switch (data.key) {
             case "price":
@@ -58,6 +63,9 @@ function Listpage(props) {
             default:
                 setCategoryId(Number(data));
         }
+        setFiltersChanged(true)
+        console.log("Product")
+
     };
     const filteredData = productList.filter((item) => {
         return (

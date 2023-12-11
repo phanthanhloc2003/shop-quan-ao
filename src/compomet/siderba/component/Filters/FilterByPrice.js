@@ -18,10 +18,19 @@ function FiltersByPrice({ onChange }) {
 
 
     const handleSubmit = () => {
+
         if (onChange) onChange({
             key: 'price',
             value: values
         });
+        setValues({
+            salePrice_gte: 0,
+            salePrice_lte: 0,
+        });
+
+
+
+
     }
 
     return (
